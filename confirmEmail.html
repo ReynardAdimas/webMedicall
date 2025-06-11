@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Terkonfirmasi - Medicall</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --medicall-primary: #4CAF50; /* Green */
+            --medicall-primary-dark: #388E3C;
+            --medicall-accent: #2196F3; /* Blue */
+            --medicall-background: #E8F5E9; /* Light green background */
+            --medicall-text-dark: #212121; /* Dark grey text */
+            --medicall-text-light: #757575; /* Medium grey text */
+            --medicall-white: #ffffff;
+            --medicall-shadow: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: var(--medicall-background);
+            color: var(--medicall-text-dark);
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: var(--medicall-white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px var(--medicall-shadow);
+            max-width: 500px;
+            width: 100%;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .icon {
+            font-size: 80px;
+            color: var(--medicall-primary);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--medicall-primary-dark);
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: var(--medicall-text-light);
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--medicall-primary);
+            color: var(--medicall-white);
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 12px var(--medicall-shadow);
+        }
+
+        .btn:hover {
+            background-color: var(--medicall-primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .icon {
+                font-size: 60px;
+            }
+
+            .btn {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">&#10003;</div> <h1>Email Terkonfirmasi!</h1>
+        <p>Selamat! Email Anda telah berhasil terkonfirmasi. Anda sekarang dapat kembali ke aplikasi untuk melanjutkan pengalaman Anda.</p>
+    </div>
+
+    <script>
+        function goBackToApp() {
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                alert("Silakan kembali ke aplikasi Medicall secara manual.");
+            }
+        }
+    </script>
+</body>
+</html>
